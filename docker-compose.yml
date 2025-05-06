@@ -1,0 +1,10 @@
+name: focus-sync
+services:
+  focus-sync:
+    build: .
+    container_name: focus-sync
+    network_mode: bridge
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data

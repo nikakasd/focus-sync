@@ -1,0 +1,49 @@
+{
+  "name": "focus-sync",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "A simple tool to show focus from Apple devices on Telegram",
+  "main": "./src/index.js",
+  "author": {
+    "name": "nikakasd",
+    "url": "https://github.com/nikakasd"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "dev": "cross-env NODE_ENV=development tsx ./src/index.ts",
+    "lint": "eslint -c eslint.config.mjs .",
+    "prepare": "husky || true",
+    "start": "cross-env NODE_ENV=production node ./dist/index.js",
+    "commitlint": "commitlint --edit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@types/common-tags": "^1.8.4",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-perfectionist": "^4.11.0",
+    "globals": "^15.15.0",
+    "husky": "^9.1.7",
+    "neostandard": "^0.12.1",
+    "tsc-alias": "^1.8.15",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.30.1"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.1",
+    "@hono/zod-validator": "^0.4.3",
+    "@mtcute/node": "^0.23.0",
+    "common-tags": "^1.8.2",
+    "cross-env": "^7.0.3",
+    "env-var": "^7.5.0",
+    "hono": "^4.7.7",
+    "winston": "^3.17.0",
+    "zod": "^3.24.3"
+  }
+}
